@@ -1,4 +1,22 @@
 import Image from 'next/image'
+import localFont from "next/dist/compiled/@next/font/dist/local";
+
+const filsonFontBook = localFont({
+  src: [
+    {
+      path: './FilsonProBook/font.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: './FilsonProBookItalic/font.woff2',
+      weight: '400',
+      style: 'italic',
+    },
+  ],
+  display: 'swap',
+  variable: '--font-filson-book',
+});
 
 export default function Home() {
   return (
